@@ -1,0 +1,59 @@
+ALTER TABLE produtos ADD COLUMN quantidade_estoque INT DEFAULT 0;
+ALTER TABLE pedidos ADD COLUMN status_pedido VARCHAR(20) DEFAULT 'Pendente';
+
+UPDATE produtos SET quantidade_estoque = 5 WHERE SKU = 'brinq456rio'; 
+UPDATE produtos SET quantidade_estoque = 0 WHERE SKU = 'brinq789rio'; 
+UPDATE produtos SET quantidade_estoque = 10 WHERE SKU = 'roupa123rio';
+
+DO $$
+DECLARE
+    v_cod_pedido VARCHAR(50);
+    v_valor NUMERIC;
+    v_falta_estoque INT;
+    reg_item RECORD;
+
+    cur_prioridade CURSOR FOR 
+        SELECT codigoPedido, valor_total 
+        FROM pedidos 
+        WHERE status_pedido = 'Pendente' 
+        ORDER BY valor_total DESC;
+BEGIN
+    OPEN cur_prioridade;
+    
+    LOOP
+        FETCH cur_prioridade INTO v_cod_pedido, v_valor;
+        
+        EXIT WHEN NOT FOUND;
+        
+        SELECT COUNT(*) INTO v_falta_estoque
+        FROM compra c
+        JOIN produtos p ON c.SKU = p.SKU
+        WHERE c.codigoPedido = v_cod_pedido
+          AND p.quantidade_estoque < c.qtd;
+          
+        IF v_falta_estoque = 0 THEN
+            
+            FOR reg_item IN (SELECT SKU, qtd FROM compra WHERE codigoPedido = v_cod_pedido)
+            LOOP
+                UPDATE produtos 
+                SET quantidade_estoque = quantidade_estoque - reg_item.qtd 
+                WHERE SKU = reg_item.SKU;
+            END LOOP;
+            
+            UPDATE pedidos 
+            SET status_pedido = 'Atendido' 
+            WHERE codigoPedido = v_cod_pedido;
+            
+        END IF;
+        
+    END LOOP;
+    
+    CLOSE cur_prioridade;
+END $$;
+
+SELECT codigoPedido, valor_total, status_pedido 
+FROM pedidos 
+
+SELECT SKU, nomeProduto, quantidade_estoque 
+FROM produtos;
+ORDER BY valor_total DESC;
