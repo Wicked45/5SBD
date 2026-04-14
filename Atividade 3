@@ -1,0 +1,43 @@
+DO $$
+DECLARE
+    v_cod_pedido VARCHAR(50);
+    v_falta_estoque INT;
+    reg_item RECORD;
+
+    cur_pedidos CURSOR FOR 
+        SELECT codigoPedido 
+        FROM pedidos 
+        WHERE status_pedido = 'Pendente';
+BEGIN
+    OPEN cur_pedidos;
+    
+    LOOP
+        FETCH cur_pedidos INTO v_cod_pedido;
+        
+        EXIT WHEN NOT FOUND;
+        
+        SELECT COUNT(*) INTO v_falta_estoque
+        FROM compra c
+        JOIN produtos p ON c.SKU = p.SKU
+        WHERE c.codigoPedido = v_cod_pedido
+          AND p.quantidade_estoque < c.qtd;
+          
+        IF v_falta_estoque = 0 THEN
+            
+            FOR reg_item IN (SELECT SKU, qtd FROM compra WHERE codigoPedido = v_cod_pedido)
+            LOOP
+                UPDATE produtos 
+                SET quantidade_estoque = quantidade_estoque - reg_item.qtd 
+                WHERE SKU = reg_item.SKU;
+            END LOOP;
+            
+            UPDATE pedidos 
+            SET status_pedido = 'Atendido' 
+            WHERE codigoPedido = v_cod_pedido;
+            
+        END IF;
+        
+    END LOOP;
+    
+    CLOSE cur_pedidos;
+END $$;
