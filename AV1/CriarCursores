@@ -1,0 +1,31 @@
+CREATE OR REPLACE PROCEDURE prc_processar_estoque_pedidos()
+LANGUAGE plpgsql AS $$
+DECLARE
+    v_order_id VARCHAR(50); v_valor_total NUMERIC; v_falta_estoque INT; v_sku VARCHAR(50); v_qtd_comprada INT; v_estoque_atual INT; v_qtd_reposicao INT; v_saldo_novo INT;
+    cur_pedidos CURSOR FOR SELECT order_id, valor_total FROM Pedidos WHERE status = 'Novo' ORDER BY valor_total DESC;
+    cur_itens REFCURSOR;
+BEGIN
+    OPEN cur_pedidos;
+    LOOP
+        FETCH cur_pedidos INTO v_order_id, v_valor_total; EXIT WHEN NOT FOUND;
+        SELECT COUNT(*) INTO v_falta_estoque FROM ItensPedido ip JOIN Produtos p ON ip.sku = p.sku WHERE ip.order_id = v_order_id AND p.estoque_atual < ip.quantidade;
+        IF v_falta_estoque = 0 THEN
+            UPDATE Pedidos SET status = 'Atendido' WHERE order_id = v_order_id;
+            OPEN cur_itens FOR SELECT sku, quantidade FROM ItensPedido WHERE order_id = v_order_id;
+            LOOP
+                FETCH cur_itens INTO v_sku, v_qtd_comprada; EXIT WHEN NOT FOUND;
+                UPDATE Produtos SET estoque_atual = estoque_atual - v_qtd_comprada WHERE sku = v_sku RETURNING estoque_atual INTO v_saldo_novo;
+                INSERT INTO MovimentacaoEstoque (order_id, sku, quantidade_retirada, saldo_apos_retirada) VALUES (v_order_id, v_sku, v_qtd_comprada, v_saldo_novo);
+            END LOOP; CLOSE cur_itens;
+        ELSE
+            UPDATE Pedidos SET status = 'Pendente' WHERE order_id = v_order_id;
+            OPEN cur_itens FOR SELECT ip.sku, ip.quantidade, p.estoque_atual, p.qtd_reposicao FROM ItensPedido ip JOIN Produtos p ON ip.sku = p.sku WHERE ip.order_id = v_order_id;
+            LOOP
+                FETCH cur_itens INTO v_sku, v_qtd_comprada, v_estoque_atual, v_qtd_reposicao; EXIT WHEN NOT FOUND;
+                IF v_estoque_atual < v_qtd_comprada THEN
+                    INSERT INTO ComprasReposicao (sku, quantidade_a_comprar, order_id_pendente) SELECT v_sku, v_qtd_reposicao, v_order_id WHERE NOT EXISTS (SELECT 1 FROM ComprasReposicao WHERE sku = v_sku AND status = 'Aguardando Compra');
+                END IF;
+            END LOOP; CLOSE cur_itens;
+        END IF;
+    END LOOP; CLOSE cur_pedidos;
+END; $$;

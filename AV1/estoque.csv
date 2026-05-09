@@ -1,0 +1,5 @@
+sku;product_name;initial_stock;restock_amount
+SKU-1;Notebook;5;10
+SKU-2;Mouse Gamer;0;20
+SKU-3;Mousepad;10;50
+SKU-4;Teclado Mecanico;3;15

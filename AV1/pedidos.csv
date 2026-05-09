@@ -1,0 +1,6 @@
+order_id;order_item_id;purchase_date;payments_date;buyer_email;buyer_name;cpf;buyer_phone_number;sku;upc;product_name;quantity_purchased;currency;item_price;ship_service_level;ship_address_1;ship_address_2;ship_address_3;ship_city;ship_state;ship_postal_code;ship_country
+101;A1;2024-05-10;2024-05-10;cliente1@email.com;Joao Silva;11122233344;11999999999;SKU-1;001;Notebook;1;BRL;3500,00;Standard;Rua A;Apto 1;Centro;Sao Paulo;SP;01000-000;BR
+101;A2;2024-05-10;2024-05-10;cliente1@email.com;Joao Silva;11122233344;11999999999;SKU-3;003;Mousepad;2;BRL;50,00;Standard;Rua A;Apto 1;Centro;Sao Paulo;SP;01000-000;BR
+102;B1;2024-05-11;2024-05-11;cliente2@email.com;Maria Souza;55566677788;21988888888;SKU-2;002;Mouse Gamer;1;BRL;250,00;Express;Rua B;Casa;Bairro Y;Rio de Janeiro;RJ;20000-000;BR
+102;B2;2024-05-11;2024-05-11;cliente2@email.com;Maria Souza;55566677788;21988888888;SKU-4;004;Teclado Mecanico;1;BRL;400,00;Express;Rua B;Casa;Bairro Y;Rio de Janeiro;RJ;20000-000;BR
+103;C1;2024-05-12;2024-05-12;cliente3@email.com;Carlos Lima;99988877766;31977777777;SKU-3;003;Mousepad;1;BRL;50,00;Standard;Rua C;Fundos;Bairro Z;Belo Horizonte;MG;30000-000;BR

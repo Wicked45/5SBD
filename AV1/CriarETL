@@ -1,0 +1,9 @@
+CREATE OR REPLACE PROCEDURE prc_etl_carga_pedidos()
+LANGUAGE plpgsql AS $$
+BEGIN
+    INSERT INTO Clientes (cpf, nome, email, telefone) SELECT DISTINCT cpf, buyer_name, buyer_email, buyer_phone_number FROM CargaTemporaria WHERE cpf IS NOT NULL ON CONFLICT (cpf) DO NOTHING;
+    INSERT INTO Produtos (sku, nome, estoque_atual, qtd_reposicao) SELECT sku, product_name, initial_stock::INT, restock_amount::INT FROM CargaTemporaria_Estoque ON CONFLICT (sku) DO NOTHING;
+    INSERT INTO Pedidos (order_id, cpf_cliente, data_compra, valor_total, status) SELECT order_id, MAX(cpf), TO_DATE(MAX(purchase_date), 'YYYY-MM-DD'), SUM(REPLACE(quantity_purchased, ',', '.')::INT * REPLACE(item_price, ',', '.')::NUMERIC), 'Novo' FROM CargaTemporaria GROUP BY order_id ON CONFLICT (order_id) DO NOTHING;
+    INSERT INTO ItensPedido (order_id, order_item_id, sku, quantidade, preco_unitario) SELECT order_id, order_item_id, sku, REPLACE(quantity_purchased, ',', '.')::INT, REPLACE(item_price, ',', '.')::NUMERIC FROM CargaTemporaria;
+    TRUNCATE TABLE CargaTemporaria, CargaTemporaria_Estoque;
+END; $$;
