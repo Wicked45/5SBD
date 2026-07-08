@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SistemaViacao.Core/SistemaViacao.Core.csproj" />
+  <Project Path="SistemaViacao.Data/SistemaViacao.Data.csproj" />
+  <Project Path="SistemaViacao.UseCases/SistemaViacao.UseCases.csproj" />
+  <Project Path="SistemaViacao.Web/SistemaViacao.Web.csproj" />
+</Solution>
