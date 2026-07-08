@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaViacao.UseCases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38bf1f224ae1a53b24eaf60a568336154fe0a07c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd4046afbff26cf5ad73d36478fb2c0df0001cd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaViacao.UseCases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaViacao.UseCases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

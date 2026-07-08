@@ -3,6 +3,7 @@ namespace SistemaViacao.Data;
 using Microsoft.EntityFrameworkCore;
 using SistemaViacao.Core;
 
+
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -11,6 +12,9 @@ public class AppDbContext : DbContext
 
     public DbSet<Motorista> Motoristas => Set<Motorista>();
     public DbSet<Onibus> Onibus => Set<Onibus>();
+    public DbSet<Rota> Rotas => Set<Rota>();
+    public DbSet<Passagem> Passagens => Set<Passagem>();
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,6 +33,14 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Onibus>().HasData(
             new Onibus("ABC-1234", 40, "Urbano")
         );
+
+        modelBuilder.Entity<Rota>()
+            .HasData(
+                new Rota(1, "SP", "RJ", 100m)
+            );
+
+        modelBuilder.Entity<Passagem>();
+
     }
 }
 
