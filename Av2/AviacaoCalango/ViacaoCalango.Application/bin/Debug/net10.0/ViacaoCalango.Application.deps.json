@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ViacaoCalango.Application/1.0.0": {
+        "dependencies": {
+          "ViacaoCalango.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ViacaoCalango.Application.dll": {}
+        }
+      },
+      "ViacaoCalango.Domain/1.0.0": {
+        "runtime": {
+          "ViacaoCalango.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ViacaoCalango.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ViacaoCalango.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

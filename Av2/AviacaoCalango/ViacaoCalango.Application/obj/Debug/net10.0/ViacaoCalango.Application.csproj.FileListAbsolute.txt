@@ -1,0 +1,16 @@
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\bin\Debug\net10.0\ViacaoCalango.Application.deps.json
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\bin\Debug\net10.0\ViacaoCalango.Application.dll
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\bin\Debug\net10.0\ViacaoCalango.Application.pdb
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\bin\Debug\net10.0\ViacaoCalango.Domain.dll
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\bin\Debug\net10.0\ViacaoCalango.Domain.pdb
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.csproj.AssemblyReference.cache
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.AssemblyInfoInputs.cache
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.AssemblyInfo.cs
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.csproj.CoreCompileInputs.cache
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.sourcelink.json
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCa.93B96B21.Up2Date
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.dll
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\refint\ViacaoCalango.Application.dll
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ViacaoCalango.Application.pdb
+C:\Users\The_w\OneDrive\Área de Trabalho\GitFacul\5SBD\Av2\AviacaoCalango\ViacaoCalango.Application\obj\Debug\net10.0\ref\ViacaoCalango.Application.dll

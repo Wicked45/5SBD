@@ -1,6 +1,0 @@
-@SistemaViacao.Web_HostAddress = http://localhost:5091
-
-GET {{SistemaViacao.Web_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViacaoCalango.Api</name>
+    </assembly>
+    <members>
+        <member name="T:AviacaoCalango.Api.Controllers.FrotaController">
+            <summary>
+            Endpoints para gerenciamento da frota.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.FrotaController.CadastrarAsync(AviacaoCalango.Api.Controllers.CadastrarOnibusRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Cadastra um novo ônibus na frota.
+            </summary>
+            <param name="request">Dados do ônibus.</param>
+            <returns>Onibus cadastrado.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.FrotaController.ListarAsync(System.Threading.CancellationToken)">
+            <summary>
+            Lista todos os ônibus cadastrados.
+            </summary>
+            <returns>Lista de ônibus.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.FrotaController.RegistrarKmAsync(System.Guid,AviacaoCalango.Api.Controllers.RegistrarKmRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Registra a quilometragem acumulada do ônibus.
+            Quando atingir 10.000km desde a última manutenção, o ônibus muda para status EmManutencao.
+            </summary>
+            <param name="onibusId">Id do ônibus.</param>
+            <param name="request">Quilometragem a registrar.</param>
+            <returns>Onibus atualizado.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.FrotaController.RealizarManutencaoAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Registra a manutenção do ônibus (zera km desde última manutenção e retorna para status Disponivel).
+            </summary>
+            <param name="onibusId">Id do ônibus.</param>
+            <returns>Onibus atualizado.</returns>
+        </member>
+        <member name="T:AviacaoCalango.Api.Controllers.MotoristasController">
+            <summary>
+            Endpoints para gerenciamento e visualização do estado dos motoristas.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.MotoristasController.ListarAsync(System.Threading.CancellationToken)">
+            <summary>
+            Lista todos os motoristas cadastrados.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.MotoristasController.ListarDisponiveisAsync(System.Guid,System.DateTimeOffset,System.Threading.CancellationToken)">
+            <summary>
+            Lista motoristas disponíveis para alocação em uma parada.
+            </summary>
+            <param name="paradaId">Id da parada de origem.</param>
+            <param name="agora">Data/hora de referência para as validações de disponibilidade.</param>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.MotoristasController.CadastrarAsync(AviacaoCalango.Api.Controllers.CadastrarMotoristaRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Cadastra um motorista alocado inicialmente em uma parada.
+            </summary>
+            <param name="request">Dados do motorista.</param>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.MotoristasController.InativarAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Inativa um motorista.
+            </summary>
+            <param name="motoristaId">Id do motorista.</param>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.MotoristasController.AlocarAsync(System.Guid,AviacaoCalango.Api.Controllers.AlocarMotoristaRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Aloca o motorista para a parada informada.
+            </summary>
+        </member>
+        <member name="T:AviacaoCalango.Api.Controllers.PainelController">
+            <summary>
+            Painel do motorista: manifesto em tempo real para embarque/desembarque na parada atual.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.PainelController.ManifestoAsync(System.Guid,System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Retorna a lista de passageiros que devem embarcar e desembarcar na parada atual.
+            </summary>
+            <param name="viagemId">Id da viagem.</param>
+            <param name="paradaAtualId">Id da parada atual.</param>
+            <returns>Manifesto da parada atual.</returns>
+        </member>
+        <member name="T:AviacaoCalango.Api.Controllers.RotasController">
+            <summary>
+            Endpoints para gerenciamento de rotas.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.RotasController.CadastrarAsync(AviacaoCalango.Api.Controllers.CadastrarRotaRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Cadastra uma nova rota.
+            </summary>
+            <param name="request">Dados da rota.</param>
+            <param name="cancellationToken">Token de cancelamento.</param>
+            <returns>Rota cadastrada.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.RotasController.ListarAsync(System.Threading.CancellationToken)">
+            <summary>
+            Lista todas as rotas.
+            </summary>
+            <param name="cancellationToken">Token de cancelamento.</param>
+            <returns>Lista de rotas.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.RotasController.AdicionarParadaAsync(System.Guid,AviacaoCalango.Api.Controllers.AdicionarParadaRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Adiciona uma parada à rota.
+            </summary>
+            <param name="rotaId">Id da rota.</param>
+            <param name="request">Dados da parada na rota.</param>
+            <param name="cancellationToken">Token de cancelamento.</param>
+            <returns>Rota atualizada.</returns>
+        </member>
+        <member name="T:AviacaoCalango.Api.Controllers.SwaggerWorkaroundController">
+            <summary>
+            Endpoint dummy para garantir que a aplicação suba mesmo quando Swagger não puder ser inicializado.
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.SwaggerWorkaroundController.Get">
+            <summary>
+            Health check simples.
+            </summary>
+            <returns>Ok.</returns>
+        </member>
+        <member name="T:AviacaoCalango.Api.Controllers.VendasController">
+            <summary>
+            Endpoints para vendas por canal (Web e Guichê).
+            </summary>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.VendasController.ComprarWebAsync(AviacaoCalango.Api.Controllers.VendaWebRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Realiza uma venda pela web.
+            Aceita apenas Pix, Crédito ou Débito.
+            </summary>
+            <param name="request">Dados da compra.</param>
+            <param name="cancellationToken">Token de cancelamento.</param>
+            <returns>Resultado da venda.</returns>
+        </member>
+        <member name="M:AviacaoCalango.Api.Controllers.VendasController.ComprarGuicheAsync(AviacaoCalango.Api.Controllers.VendaGuicheRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Realiza uma venda no guichê.
+            Aceita apenas Dinheiro.
+            </summary>
+            <param name="request">Dados da compra.</param>
+            <param name="cancellationToken">Token de cancelamento.</param>
+            <returns>Resultado da venda.</returns>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>
