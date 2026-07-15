@@ -2,9 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AviacaoCalango.Api.Controllers;
 
-/// <summary>
-/// Endpoint dummy para garantir que a aplicação suba mesmo quando Swagger não puder ser inicializado.
-/// </summary>
 [ApiController]
 [Route("api/health")] 
 public class SwaggerWorkaroundController : ControllerBase

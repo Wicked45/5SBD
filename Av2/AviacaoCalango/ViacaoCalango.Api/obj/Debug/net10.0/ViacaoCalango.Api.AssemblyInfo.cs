@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ViacaoCalango.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e91a647a1cc8a758c6dd2f2e38464effc31cfa83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f147472576e455ea43e76c62918b53f133f1e57")]
 [assembly: System.Reflection.AssemblyProductAttribute("ViacaoCalango.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ViacaoCalango.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

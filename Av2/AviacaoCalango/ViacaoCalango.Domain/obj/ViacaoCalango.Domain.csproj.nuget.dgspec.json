@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj": {}
+    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango-corrigido\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj": {
+    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango-corrigido\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango-corrigido\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj",
         "projectName": "ViacaoCalango.Domain",
-        "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj",
+        "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango-corrigido\\AviacaoCalango\\ViacaoCalango.Domain\\ViacaoCalango.Domain.csproj",
         "packagesPath": "C:\\Users\\The_w\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Domain\\obj\\",
+        "outputPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango-corrigido\\AviacaoCalango\\ViacaoCalango.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\The_w\\AppData\\Roaming\\NuGet\\NuGet.Config"

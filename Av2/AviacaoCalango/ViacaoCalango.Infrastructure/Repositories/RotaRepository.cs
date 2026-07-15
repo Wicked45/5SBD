@@ -13,7 +13,6 @@ public class RotaRepository : IRotaRepository
 
     public Task<Rota?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         _db.Rotas
-            .AsNoTracking()
             .Include(r => (IReadOnlyCollection<RotaParada>)r.Paradas)
             .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 

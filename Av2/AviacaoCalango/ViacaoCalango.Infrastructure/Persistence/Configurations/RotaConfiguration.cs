@@ -18,7 +18,12 @@ public class RotaConfiguration : IEntityTypeConfiguration<Rota>
         builder.Property(x => x.Id).ValueGeneratedNever();
 
         // RotaParada é configurada como entidade própria (ver RotaParadaConfiguration se necessário).
-        builder.HasMany(typeof(RotaParada), "_paradas");
+        // Configura explicitamente UMA única navegação (Rota.Paradas -> RotaParada.RotaId),
+        // evitando que o EF crie um segundo relacionamento "fantasma" via o campo _paradas.
+        builder.HasMany(x => x.Paradas)
+            .WithOne()
+            .HasForeignKey(x => x.RotaId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
 
