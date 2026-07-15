@@ -31,11 +31,7 @@ public class VendasController : ControllerBase
         if (request.CanalPagamento is TipoPagamento.Dinheiro)
             return BadRequest("Canal Web não aceita pagamento em Dinheiro.");
 
-        // Nesta fase, o VendaAppService ainda não possui orquestração completa de domínio/EF.
-        // Mantemos o endpoint apenas como contrato; a lógica de alocação será aplicada quando a compra/passagem estiver completa.
-        // Retornamos uma resposta determinística de assento usando a lógica existente.
-        // Observação: preço total e criação de Passagem serão implementados na Fase seguinte.
-        var capacidade = 32; // placeholder técnico (precisa vir do ônibus associado à viagem).
+        var capacidade = 32; 
         var assentosOcupados = (IReadOnlyCollection<int>)Array.Empty<int>();
         var (assentoAlocado, _) = _vendaAppService.Comprar(capacidade, assentosOcupados, request.AssentoSolicitado);
 

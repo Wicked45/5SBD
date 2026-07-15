@@ -4,11 +4,6 @@
         <name>ViacaoCalango.Api</name>
     </assembly>
     <members>
-        <member name="T:AviacaoCalango.Api.Controllers.FrotaController">
-            <summary>
-            Endpoints para gerenciamento da frota.
-            </summary>
-        </member>
         <member name="M:AviacaoCalango.Api.Controllers.FrotaController.CadastrarAsync(AviacaoCalango.Api.Controllers.CadastrarOnibusRequestDto,System.Threading.CancellationToken)">
             <summary>
             Cadastra um novo ônibus na frota.

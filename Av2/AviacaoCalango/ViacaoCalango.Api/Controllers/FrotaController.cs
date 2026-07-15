@@ -5,10 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AviacaoCalango.Api.Controllers;
 
-/// <summary>
-/// Endpoints para gerenciamento da frota.
-/// </summary>
 [ApiController]
+
 [Route("api/frota")]
 public class FrotaController : ControllerBase
 {

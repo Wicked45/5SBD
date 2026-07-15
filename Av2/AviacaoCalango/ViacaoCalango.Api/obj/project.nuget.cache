@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ex8flWDQfMU=",
+  "dgSpecHash": "W2Rvk629/G0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
+  "projectFilePath": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The_w\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\The_w\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
@@ -28,9 +28,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.6 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
+      "projectPath": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
+      "filePath": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"

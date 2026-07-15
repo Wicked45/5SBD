@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ViacaoCalango.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e438b9b5aa53a54f54f21e3755e88442afd9031c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e91a647a1cc8a758c6dd2f2e38464effc31cfa83")]
 [assembly: System.Reflection.AssemblyProductAttribute("ViacaoCalango.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ViacaoCalango.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

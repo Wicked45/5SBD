@@ -6,12 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!-- Imports do código já existente (raiz) -->
-    <Compile Include="..\Domain\Enums\*.cs" />
-    <Compile Include="..\Domain\Entities\**\*.cs" />
-    <Compile Include="..\Domain\Repositories\**\*.cs" />
-  </ItemGroup>
+
 
 </Project>
 

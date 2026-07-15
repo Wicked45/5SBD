@@ -10,10 +10,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!-- Imports do código já existente (raiz) -->
-    <Compile Include="..\Application\Services\**\*.cs" />
-  </ItemGroup>
+
 
 </Project>
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj": {}
+    "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj": {
+    "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
+        "projectUniqueName": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
         "projectName": "ViacaoCalango.Api",
-        "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
+        "projectPath": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\ViacaoCalango.Api.csproj",
         "packagesPath": "C:\\Users\\The_w\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\obj\\",
+        "outputPath": "c:\\Users\\The_w\\OneDrive\\Área de Trabalho\\GitFacul\\5SBD\\Av2\\AviacaoCalango\\ViacaoCalango.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\The_w\\AppData\\Roaming\\NuGet\\NuGet.Config"

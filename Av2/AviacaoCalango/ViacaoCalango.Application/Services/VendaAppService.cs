@@ -30,7 +30,7 @@ public class VendaAppService
             return (assento, true);
         }
 
-        // Minimizar espaços vazios: estratégia simples que tende a agrupar passageiros.
+        // Minimizar espaços vazios.
         // Busca intervalos contíguos de assentos livres com menor “buraco” ao redor.
         var ocupados = assentosOcupados.OrderBy(x => x).ToArray();
         var ocupSet = assentosOcupados.ToHashSet();
